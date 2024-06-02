@@ -1,0 +1,38 @@
+.calculator {
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #display {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  @media (min-width: 480px) {
+    .calculator {
+      width: 50%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .calculator {
+      width: 30%;
+    }
+  }
