@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cálculo de Interés</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        /* Modo oscuro */
+        body.dark-mode {
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+        
+        body.dark-mode .button {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cálculo de Interés</h1>
+    <form action="calculoIC/calcular.php" method="post">
+        <label for="capital">Valor del capital:</label>
+        <input type="number" id="capital" name="capital" required>
+        <br><br>
+        <label for="tasa">Interés anual (%):</label>
+        <input type="number" id="tasa" name="tasa" required>
+        <br><br>
+        <label for="tiempo">Periodo de tiempo (en años):</label>
+        <input type="number" id="tiempo" name="tiempo" required>
+        <br><br>
+        <input type="submit" value="Calcular">
+    </form>
+
+    
+    <script>
+       // Obtener los valores del capital, la tasa de interés y el tiempo
+var capital = document.getElementById("capital").value;
+var tasa = document.getElementById("tasa").value;
+var tiempo = document.getElementById("tiempo").value;
+
+// Calcular el interés simple y compuesto
+var interesSimple = (capital * tasa * tiempo) / 100;
+var interesCompuesto = capital * Math.pow((1 + (tasa / 100)), tiempo) - capital;
+
+// Mostrar los resultados en la consola
+console.log("El interés simple es: " + interesSimple);
+console.log("El interés compuesto es: " + interesCompuesto);
+    </script>
+    <br><br>
+     <script>
+        const darkModeToggle = document.createElement('button');
+        darkModeToggle.innerText = 'Cambiar a Modo Oscuro';
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+        document.body.appendChild(darkModeToggle);
+    </script>
+    <br><br>
+    <a href="index.html" class="button">Regresar al inicio</a>
+</body>
+</html>

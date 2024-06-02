@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resolución de ecuación de segundo grado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        /* Modo oscuro */
+        body.dark-mode {
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+        
+        body.dark-mode .button {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resolución de ecuación de segundo grado</h1>
+    
+    <form method="post" action="ecuacion incognita/calcular.php">
+        <label for="a">Coeficiente a:</label>
+        <input type="number" name="a" id="a" required>
+        <br><br>
+        <label for="b">Coeficiente b:</label>
+        <input type="number" name="b" id="b" required>
+        <br><br>
+        <label for="c">Coeficiente c:</label>
+        <input type="number" name="c" id="c" required>
+        <br><br>
+        <input type="submit" value="Calcular">
+    </form>
+    <br><br>
+    <script>
+        const darkModeToggle = document.createElement('button');
+        darkModeToggle.innerText = 'Cambiar a Modo Oscuro';
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+        document.body.appendChild(darkModeToggle);
+    </script>
+    <br><br>
+    <a href="index.html" class="button">Regresar al inicio</a>
+</body>
+</html>

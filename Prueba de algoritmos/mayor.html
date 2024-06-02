@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Determinar el número mayor de tres ingresados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        /* Modo oscuro */
+        body.dark-mode {
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+        
+        body.dark-mode .button {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Determinar el número mayor de tres ingresados</h1>
+    
+    <form method="post" action="mayor menor/calcular.php">
+        <label for="numero1">Número 1:</label>
+        <input type="number" name="numero1" id="numero1" required>
+        <br><br>
+        <label for="numero2">Número 2:</label>
+        <input type="number" name="numero2" id="numero2" required>
+        <br><br>
+        <label for="numero3">Número 3:</label>
+        <input type="number" name="numero3" id="numero3" required>
+        <br><br>
+        <input type="submit" value="Calcular">
+    </form>
+    
+    <script>
+        const darkModeToggle = document.createElement('button');
+        darkModeToggle.innerText = 'Cambiar a Modo Oscuro';
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+        document.body.appendChild(darkModeToggle);
+    </script>
+    
+    <a href="index.html" class="button">Regresar al inicio</a>
+</body>
+</html>

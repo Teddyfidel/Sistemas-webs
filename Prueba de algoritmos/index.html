@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de archivos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        /* Modo oscuro */
+        body.dark-mode {
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+        
+        body.dark-mode .button {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de archivos</h1>
+    
+    <table border="2">
+        <tr>
+            <th>Archivo</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td>P. #292</td>
+            <td>Tras los pasos de un... Hacker</td>
+        </tr>
+        <tr>
+            <td><a href="suma.html">Suma de dos numeros</a></td>
+            <td>Realiza la suma de dos números ingresados</td>
+        </tr>
+        <tr>
+            <td><a href="cal.html">Calculo de superficie y volumen de una esfera</a></td>
+            <td>Calcula la superficie y el volumen de una esfera</td>
+        </tr>
+        <tr>
+            <td><a href="mayor.html">Determinar el numero mayor de tres ingresados</a></td>
+            <td>Determina el número mayor de tres números ingresados</td>
+        </tr>
+        <tr>
+            <td><a href="ecuacion incognita.html">Resolución de ecuación de segundo grado</a></td>
+            <td>Resuelve una ecuación de segundo grado</td>
+        </tr>
+        <tr>
+            <td><a href="cpnvertir.html">Determinar el numero mayor de tres ingresados</a></td>
+            <td>Conversión de litros a galones</td>
+        </tr>
+        <tr>
+            <td><a href="CalculoP.html">Cálculo del perímetro y área de una circunferencia</a></td>
+            <td>Cálculo del perímetro y área de una circunferencia</td>
+        </tr>
+        <tr>
+            <td><a href="ConversiOnmm.html">Conversión de metros a múltiplos y submúltiplos</a></td>
+            <td>Conversión de metros a múltiplos y submúltiplos</td>
+        </tr>
+        <tr>
+            <td><a href="CalculoPH.html">Cálculo de perímetro y hipotenusa de un triángulo rectángulo</a></td>
+            <td>Cálculo de perímetro y hipotenusa de un triángulo rectángulo</td>
+        </tr>
+        <tr>
+            <td><a href="CalculoAT.html">Cálculo del área de un triángulo</a></td>
+            <td>Cálculo del área de un triángulo</td>
+        </tr>
+        <tr>
+            <td><a href="CalculoAT2.html">Cálculo del área de un triángulo<</a></td>
+            <td>Cálculo del área de un triángulo<</td>
+        </tr>
+        <tr>
+            <td><a href="CalculoIC.html">Cálculo de Interés</a></td>
+            <td>Cálculo de Interés</td>
+        </tr>
+        <tr>
+            <td><a href="CalculoFG.html">Resolución de Sistema de Ecuacioness</a></td>
+            <td>Resolución de Sistema de Ecuaciones</td>
+        </tr>
+        <tr>
+            <td><a href="CalculoMMS.html">Determinar Mayor, Menor y Sumatoria</a></td>
+            <td>Determinar Mayor, Menor y Sumatoria</td>
+        </tr>
+        <tr>
+            <td><a href="CalculoAP.html">Calcular Área y Perímetro de un Rectángulo</a></td>
+            <td>Calcular Área y Perímetro de un Rectángulo</td>
+        </tr>
+        <tr>
+            <td><a href="CalculoDepreciacion.html">Calcular Depreciación y Valor de Venta</a></td>
+            <td>Calcular Depreciación y Valor de Venta</td>
+        </tr>
+        <tr>
+            <td>P. #301</td>
+            <td>Bucles, funciones y subrutinas</td>
+        </tr>
+    </table><br><br>
+    <a href="index.html" class="button">Regresar al inicio</a>
+    
+    <script>
+        const darkModeToggle = document.createElement('button');
+        darkModeToggle.innerText = 'Cambiar a Modo Oscuro';
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+        document.body.appendChild(darkModeToggle);
+    </script>
+</body>
+</html>

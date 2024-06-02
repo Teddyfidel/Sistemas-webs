@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cálculo de perímetro y hipotenusa de un triángulo rectángulo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        /* Modo oscuro */
+        body.dark-mode {
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+        
+        body.dark-mode .button {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cálculo de perímetro y hipotenusa de un triángulo rectángulo</h1>
+
+    <form>
+        <label for="catetoA">Longitud del cateto A:</label>
+        <input type="number" id="catetoA" name="catetoA" step="any" required>
+        <br>
+        <label for="catetoB">Longitud del cateto B:</label>
+        <input type="number" id="catetoB" name="catetoB" step="any" required>
+        <br>
+        <button type="button" onclick="calcular()">Calcular</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+        function calcular() {
+            var catetoA = parseFloat(document.getElementById('catetoA').value);
+            var catetoB = parseFloat(document.getElementById('catetoB').value);
+
+            var hipotenusa = Math.sqrt(Math.pow(catetoA, 2) + Math.pow(catetoB, 2));
+            var perimetro = catetoA + catetoB + hipotenusa;
+
+            document.getElementById('resultado').innerHTML = "La hipotenusa del triángulo rectángulo es: " + hipotenusa.toFixed(2) + "<br>El perímetro del triángulo rectángulo es: " + perimetro.toFixed(2);
+        }
+    </script>
+    <br><br>
+    <script>
+        const darkModeToggle = document.createElement('button');
+        darkModeToggle.innerText = 'Cambiar a Modo Oscuro';
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+        document.body.appendChild(darkModeToggle);
+    </script>
+    <br><br>
+    <a href="index.html" class="button">Regresar al inicio</a>
+</body>
+</html>

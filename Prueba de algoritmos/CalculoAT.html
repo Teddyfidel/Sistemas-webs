@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cálculo del área de un triángulo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        /* Modo oscuro */
+        body.dark-mode {
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+        
+        body.dark-mode .button {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cálculo del área de un triángulo</h1>
+
+    <form>
+        <label for="lado1">Longitud del lado 1:</label>
+        <input type="number" id="lado1" name="lado1" step="any" required>
+        <br>
+        <label for="lado2">Longitud del lado 2:</label>
+        <input type="number" id="lado2" name="lado2" step="any" required>
+        <br>
+        <label for="lado3">Longitud del lado 3:</label>
+        <input type="number" id="lado3" name="lado3" step="any" required>
+        <br>
+        <button type="button" onclick="calcular()">Calcular</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+        function calcular() {
+            var lado1 = parseFloat(document.getElementById('lado1').value);
+            var lado2 = parseFloat(document.getElementById('lado2').value);
+            var lado3 = parseFloat(document.getElementById('lado3').value);
+
+            var sPerimetro = (lado1 + lado2 + lado3) / 2;
+
+            var area = Math.sqrt(sPerimetro * (sPerimetro - lado1) * (sPerimetro - lado2) * (sPerimetro - lado3));
+
+            if (isNaN(area)) {
+                document.getElementById('resultado').innerHTML = "El triángulo no existe";
+            } else {
+                document.getElementById('resultado').innerHTML = "El área del triángulo es: " + area.toFixed(2);
+            }
+        }
+    </script>
+    <br><br>
+    <script>
+        const darkModeToggle = document.createElement('button');
+        darkModeToggle.innerText = 'Cambiar a Modo Oscuro';
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+        document.body.appendChild(darkModeToggle);
+    </script>
+    <br><br>
+    <a href="index.html" class="button">Regresar al inicio</a>
+</body>
+</html>

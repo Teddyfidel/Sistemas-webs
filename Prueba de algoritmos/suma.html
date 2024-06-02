@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Suma de dos números</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        /* Modo oscuro */
+        body.dark-mode {
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+        
+        body.dark-mode .button {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="numero1">Número 1</label>
+    <input type="text" id="numero1"><br>
+    <label for="numero2">Número 2</label>
+    <input type="text" id="numero2"><br>
+    <button onclick="sumar()">Sumar</button><br>
+    <label for="resultado">Resultado</label>
+    <input type="text" id="resultado">
+    <br><br>
+    <script>
+        const darkModeToggle = document.createElement('button');
+        darkModeToggle.innerText = 'Cambiar a Modo Oscuro';
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+        document.body.appendChild(darkModeToggle);
+        
+        function sumar() {
+            const numero1 = Number(document.getElementById('numero1').value);
+            const numero2 = Number(document.getElementById('numero2').value);
+            const resultado = numero1 + numero2;
+            document.getElementById('resultado').value = resultado;
+        }
+    </script>
+    <br><br>
+    <a href="index.html" class="button">Regresar al inicio</a>
+</body>
+</html>
