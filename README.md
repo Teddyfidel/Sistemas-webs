@@ -25,4 +25,4 @@ A lo largo de mi carrera, he tenido la oportunidad de trabajar en diversos proye
 - [LinkedIn](https://www.linkedin.com/in/teddy-fidel-valencia-castro-430825311/)
 - [GitHub](https://github.com/teddyvalencia)
 - [Correo Electrónico](teddyvalencia1997@gmail.com)
-  [WhatsApp - Contacto](https://wa.me/+593967879068)
+- [WhatsApp - Contacto](https://wa.me/+593967879068)
