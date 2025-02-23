@@ -1,8 +1,3 @@
-#Sistemas-webs
-¡Por supuesto! Aquí tienes la presentación actualizada:
-
----
-
 ## 🎉 ¡Hola, soy Teddy Fidel Valencia Castro! 🎉
 
 ### 🧑‍💻 Ingeniero en Tecnología de la Información
